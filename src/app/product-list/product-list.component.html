@@ -1,0 +1,19 @@
+<h2>Menu</h2>
+<div *ngFor="let product of products">
+  <a [title]="product.name+ ' details'" [routerLink]="['/products', product.id]">
+    {{ product.name }}
+  </a>
+  <p *ngIf="product.description">
+    Ingredients: {{ product.description }}
+  </p>
+  <p> Price: {{product.price | currency }}, {{product.price | currency:'EUR' }}</p>
+  <button (click)="addToCart(product)">Add to cart</button>
+  <p></p>
+</div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

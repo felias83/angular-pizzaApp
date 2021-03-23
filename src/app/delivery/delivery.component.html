@@ -1,0 +1,7 @@
+<h3>Delivery Prices</h3>
+
+<div class="delivery-item" *ngFor="let delivery of deliveryCosts | async">
+  <span>{{ delivery.type }}</span>
+  <span>{{ delivery.price | currency }}</span>
+  <span>{{ delivery.price | currency:'EUR' }}</span>
+</div>
